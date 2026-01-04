@@ -1,0 +1,81 @@
+/* Gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero Section */
+.hero {
+    height: 320px;
+    background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism effect */
+.hero-glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Card design */
+.card {
+    width: 80%;
+    margin: 35px auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Timeline Style */
+.timeline-section {
+    padding: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.timeline-item {
+    padding: 15px 20px;
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    border-left: 6px solid #1a237e;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to right, #bbdefb, #f8bbd0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        width: 92%;
+    }
+
+    .hero {
+        height: 220px;
+    }
+
+    .hero-glass {
+        padding: 20px;
+    }
+}
